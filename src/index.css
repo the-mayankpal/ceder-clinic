@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --color-brand-bg: #ffffff;
+  --color-brand-ink: #000000;
+  --color-brand-accent: #384BF8;
+  --color-brand-muted: #000000;
+  --color-brand-section: #ffffff;
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove default focus outlines to prevent blue square effect */
+*:focus {
+  outline: none !important;
+}
+button:focus, input:focus, textarea:focus, a:focus {
+  outline: none !important;
+}
+
+/* Override browser autofill styles for dark theme inputs */
+.bg-brand-ink input:-webkit-autofill,
+.bg-brand-ink input:-webkit-autofill:hover, 
+.bg-brand-ink input:-webkit-autofill:focus, 
+.bg-brand-ink input:-webkit-autofill:active,
+.bg-brand-ink textarea:-webkit-autofill,
+.bg-brand-ink textarea:-webkit-autofill:hover, 
+.bg-brand-ink textarea:-webkit-autofill:focus, 
+.bg-brand-ink textarea:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--color-brand-ink) inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Override browser autofill styles for light theme inputs */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover, 
+textarea:-webkit-autofill:focus, 
+textarea:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--color-brand-bg) inset !important;
+  -webkit-text-fill-color: var(--color-brand-ink) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Custom Cursor Styles */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+  
+  input, textarea, [contenteditable="true"] {
+    cursor: text !important;
+  }
+}
