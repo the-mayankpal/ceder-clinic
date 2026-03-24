@@ -99,11 +99,15 @@ export default function Footer({ setCurrentView }: { setCurrentView?: (view: str
             <div className="flex flex-col gap-4">
               <a href="#" className="flex items-start gap-3 text-white/70 hover:text-brand-accent transition-colors group">
                 <MapPin size={16} className="mt-0.5 opacity-50 group-hover:opacity-100" />
-                <span className="text-sm leading-relaxed">20475 Biscayne Blvd<br/>Miami, FL 33180-1550</span>
+                <span className="text-sm leading-relaxed">Salim Al Mubarak St. Block 2<br/>The View Tower, 10th Floor, Salmiya, KW</span>
               </a>
-              <a href="tel:+13059331111" className="flex items-center gap-3 text-white/70 hover:text-brand-accent transition-colors group">
+              <a href="tel:+96599481111" className="flex items-center gap-3 text-white/70 hover:text-brand-accent transition-colors group">
                 <Phone size={16} className="opacity-50 group-hover:opacity-100" />
-                <span className="text-sm">+1 (305) 933-1111</span>
+                <span className="text-sm">+965 9948 1111</span>
+              </a>
+              <a href="tel:19704112" className="flex items-center gap-3 text-white/70 hover:text-brand-accent transition-colors group">
+                <Phone size={16} className="opacity-50 group-hover:opacity-100" />
+                <span className="text-sm">PACI: 19704112 20002</span>
               </a>
               <a href="mailto:info@clovedental.com" className="flex items-center gap-3 text-white/70 hover:text-brand-accent transition-colors group">
                 <Mail size={16} className="opacity-50 group-hover:opacity-100" />

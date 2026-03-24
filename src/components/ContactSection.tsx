@@ -70,22 +70,23 @@ export default function ContactSection() {
           >
             {/* Map iframe with light mode filter */}
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.086438883516!2d-80.1456209!3d25.9652134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ac53580a1871%3A0x8085d34e9121a9a!2s20475%20Biscayne%20Blvd%2C%20Aventura%2C%20FL%2033180!5e0!3m2!1sen!2sus!4v1710600000000!5m2!1sen!2sus" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0, filter: 'grayscale(100%) contrast(85%) opacity(80%)' }} 
-              allowFullScreen={false} 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-            ></iframe>
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1739.0436979269555!2d48.0772!3d29.3392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf9d2e4e242baf%3A0xe840e3fee575e57b!2sThe%20View%20Tower!5e0!3m2!1sen!2skw!4v1711234567890!5m2!1sen!2skw" 
+               width="100%" 
+               height="100%" 
+               style={{ border: 0, filter: 'grayscale(100%) contrast(85%) opacity(80%)' }} 
+               allowFullScreen={false} 
+               loading="lazy" 
+               referrerPolicy="no-referrer-when-downgrade"
+               className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+             ></iframe>
             
             {/* Overlay Card */}
-            <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-auto md:w-72 p-6 rounded-xl bg-white/90 backdrop-blur-xl border border-brand-ink/10 shadow-2xl">
+            <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-auto md:w-80 p-6 rounded-xl bg-white/90 backdrop-blur-xl border border-brand-ink/10 shadow-2xl">
               <h3 className="font-serif text-xl text-brand-ink mb-2">Clove Dental</h3>
               <p className="text-brand-ink/60 text-sm font-light leading-relaxed mb-4">
-                20475 Biscayne Blvd<br />
-                Miami, FL 33180-1550
+                Salim Al Mubarak St. Block 2<br />
+                The View Tower, 10th floor<br />
+                PACI No. 19704112 20002, Salmiya, Kuwait
               </p>
               <div className="flex items-center gap-2 text-brand-accent text-xs uppercase tracking-widest font-medium">
                 <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
