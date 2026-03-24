@@ -254,27 +254,48 @@ function TeamSection() {
                 key={index}
                 className="group relative py-6 md:py-8 border-b border-brand-ink/10 cursor-pointer transition-opacity duration-500 hover:!opacity-100 lg:group-hover/list:opacity-30"
                 onMouseEnter={() => setActiveIndex(index)}
+                onClick={() => setActiveIndex(index)}
               >
                 <div className="flex flex-col gap-4">
-                  <div className="flex items-center gap-6 md:gap-12">
-                    <span className="font-mono text-xs md:text-sm text-brand-ink/30 group-hover:text-brand-accent transition-colors duration-500">
-                      0{index + 1}
-                    </span>
-                    <h3 className="font-serif text-2xl md:text-4xl lg:text-5xl text-brand-ink/50 group-hover:text-brand-ink transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-4 md:group-hover:translate-x-8">
-                      {member.name}
-                    </h3>
-                  </div>
-                  
-                  {/* Mobile Image Display (Always visible on small screens) */}
-                  <div className="lg:hidden w-full h-[400px] mt-6 mb-4 rounded-2xl overflow-hidden relative shadow-lg">
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
-                       <div className="w-12 h-[1px] bg-brand-accent mb-6"></div>
-                       <p className="font-serif italic text-2xl text-white leading-relaxed">"{member.quote}"</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-6 md:gap-12">
+                      <span className="font-mono text-xs md:text-sm text-brand-ink/30 group-hover:text-brand-accent transition-colors duration-500">
+                        0{index + 1}
+                      </span>
+                      <h3 className={`font-serif text-2xl md:text-4xl lg:text-5xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-4 md:group-hover:translate-x-8 ${activeIndex === index ? 'text-brand-ink' : 'text-brand-ink/50 group-hover:text-brand-ink'}`}>
+                        {member.name}
+                      </h3>
+                    </div>
+                    {/* Directional arrow for mobile to signal expandability */}
+                    <div className={`lg:hidden transition-transform duration-500 ${activeIndex === index ? 'rotate-90' : 'rotate-0'}`}>
+                       <ArrowRight size={18} className="text-brand-ink/30" />
                     </div>
                   </div>
+                  
+                  {/* Mobile Image Reveal (Triggered by activeIndex) */}
+                  <motion.div 
+                    initial={false}
+                    animate={{ 
+                      height: activeIndex === index ? 'auto' : 0,
+                      opacity: activeIndex === index ? 1 : 0
+                    }}
+                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                    className="lg:hidden w-full overflow-hidden"
+                  >
+                    <div className="w-full h-[400px] mt-2 mb-4 rounded-2xl overflow-hidden relative shadow-lg">
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
+                         <div className="w-12 h-[1px] bg-brand-accent mb-6"></div>
+                         <p className="font-serif italic text-2xl text-white leading-relaxed">"{member.quote}"</p>
+                      </div>
+                    </div>
+                  </motion.div>
 
-                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 lg:h-0 lg:overflow-hidden lg:group-hover:h-auto lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 md:pl-[4.5rem] lg:pl-[5.5rem] mt-2 md:mt-4">
+                  <div className={`flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all duration-500 md:pl-[4.5rem] lg:pl-[5.5rem] mt-2 md:mt-4 ${
+                    activeIndex === index 
+                      ? 'h-auto opacity-100 visible pointer-events-auto' 
+                      : 'lg:h-0 lg:overflow-hidden lg:opacity-0 lg:invisible lg:pointer-events-none h-0 opacity-0 overflow-hidden invisible pointer-events-none'
+                  }`}>
                     <div>
                       <p className="text-brand-accent text-xs md:text-sm uppercase tracking-[0.2em] mb-1 font-medium">{member.role}</p>
                       <p className="text-brand-ink/60 text-xs md:text-sm font-light tracking-wide">{member.credentials}</p>
