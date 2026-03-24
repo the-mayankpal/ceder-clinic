@@ -32,7 +32,7 @@ const clinicServices: {
 }[] = [
   {
     title: "Dentistry",
-    description: "Comprehensive dental care at Clove Dental from routine check-ups to cosmetic treatments, your smile is our priority. Experience personalized care and the latest in dental technology.",
+    description: "Comprehensive dental care at Cedar Clinic from routine check-ups to cosmetic treatments, your smile is our priority. Experience personalized care and the latest in dental technology.",
     Icon: Tooth,
     image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=800&auto=format&fit=crop"
   },
@@ -44,13 +44,13 @@ const clinicServices: {
   },
   {
     title: "Internal Medicines",
-    description: "Optimize your health at Clove Dental. Our internal medicine services offer comprehensive care for a range of conditions, providing personalized treatment plans and compassionate support.",
+    description: "Optimize your health at Cedar Clinic. Our internal medicine services offer comprehensive care for a range of conditions, providing personalized treatment plans and compassionate support.",
     Icon: Stethoscope,
     image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800"
   },
   {
     title: "Gynecology Services",
-    description: "At Clove Dental, our gynecology services offer expert care tailored to your needs. From routine check-ups to specialized treatments, trust our experienced team for compassionate and comprehensive gynecological care.",
+    description: "At Cedar Clinic, our gynecology services offer expert care tailored to your needs. From routine check-ups to specialized treatments, trust our experienced team for compassionate and comprehensive gynecological care.",
     Icon: GenderFemale,
     image: "/gynecology_service.png"
   }
@@ -705,7 +705,7 @@ export default function App() {
                 }}
                 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] font-light tracking-tight mb-8 text-brand-ink"
               >
-                Clove Dental
+                Cedar Clinic
               </motion.h2>
               
               <motion.p 

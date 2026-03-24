@@ -29,7 +29,7 @@ export default function Footer({ setCurrentView }: { setCurrentView?: (view: str
           <div className="lg:col-span-6 flex flex-col items-start">
             <img
               src={FOOTER_LOGO_URL}
-              alt="Clove Dental logo"
+              alt="Cedar Clinic logo"
               className="h-14 md:h-16 w-auto object-contain mb-6"
             />
             <motion.div 
@@ -111,7 +111,7 @@ export default function Footer({ setCurrentView }: { setCurrentView?: (view: str
               </a>
               <a href="mailto:info@clovedental.com" className="flex items-center gap-3 text-white/70 hover:text-brand-accent transition-colors group">
                 <Mail size={16} className="opacity-50 group-hover:opacity-100" />
-                <span className="text-sm">info@clovedental.com</span>
+                <span className="text-sm">info@cedarclinic.co</span>
               </a>
             </div>
             
@@ -138,7 +138,7 @@ export default function Footer({ setCurrentView }: { setCurrentView?: (view: str
               maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)'
             }}
           >
-            {['C', 'L', 'O', 'V', 'E'].map((letter, i) => (
+            {['C', 'E', 'D', 'A', 'R'].map((letter, i) => (
               <span key={i} className="hover:text-white/20 transition-colors duration-300 cursor-default">
                 {letter}
               </span>
@@ -149,7 +149,7 @@ export default function Footer({ setCurrentView }: { setCurrentView?: (view: str
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/10">
           <p className="text-white/40 text-[10px] md:text-xs uppercase tracking-widest text-center md:text-left">
-            © {new Date().getFullYear()} Clove Dental. All rights reserved.
+            © {new Date().getFullYear()} Cedar Clinic. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-white/40 hover:text-white text-[10px] md:text-xs uppercase tracking-widest transition-colors">Privacy Policy</a>

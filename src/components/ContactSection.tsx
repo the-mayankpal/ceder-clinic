@@ -82,7 +82,7 @@ export default function ContactSection() {
             
             {/* Overlay Card */}
             <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-auto md:w-80 p-6 rounded-xl bg-white/90 backdrop-blur-xl border border-brand-ink/10 shadow-2xl">
-              <h3 className="font-serif text-xl text-brand-ink mb-2">Clove Dental</h3>
+              <h3 className="font-serif text-xl text-brand-ink mb-2">Cedar Clinic</h3>
               <p className="text-brand-ink/60 text-sm font-light leading-relaxed mb-4">
                 Salim Al Mubarak St. Block 2<br />
                 The View Tower, 10th floor<br />
