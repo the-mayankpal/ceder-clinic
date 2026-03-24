@@ -211,7 +211,7 @@ export default function BookingFlow({ onBack }: BookingFlowProps) {
                 Select a service to help us prepare for your visit. If you're unsure, General Consultation is a great place to start.
               </p>
 
-              <div className="grid grid-cols-2 gap-3 md:gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
                 {services.map(s => (
                   <motion.div 
                     key={s.id}

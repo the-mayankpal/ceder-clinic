@@ -32,7 +32,7 @@ const clinicServices: {
 }[] = [
   {
     title: "Dentistry",
-    description: "Comprehensive dental care at Cedar Clinic from routine check-ups to cosmetic treatments, your smile is our priority. Experience personalized care and the latest in dental technology.",
+    description: "Comprehensive dental care at Clove Dental from routine check-ups to cosmetic treatments, your smile is our priority. Experience personalized care and the latest in dental technology.",
     Icon: Tooth,
     image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=800&auto=format&fit=crop"
   },
@@ -44,13 +44,13 @@ const clinicServices: {
   },
   {
     title: "Internal Medicines",
-    description: "Optimize your health at Cedar Clinic. Our internal medicine services offer comprehensive care for a range of conditions, providing personalized treatment plans and compassionate support.",
+    description: "Optimize your health at Clove Dental. Our internal medicine services offer comprehensive care for a range of conditions, providing personalized treatment plans and compassionate support.",
     Icon: Stethoscope,
     image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800"
   },
   {
     title: "Gynecology Services",
-    description: "At Cedar Clinic, our gynecology services offer expert care tailored to your needs. From routine check-ups to specialized treatments, trust our experienced team for compassionate and comprehensive gynecological care.",
+    description: "At Clove Dental, our gynecology services offer expert care tailored to your needs. From routine check-ups to specialized treatments, trust our experienced team for compassionate and comprehensive gynecological care.",
     Icon: GenderFemale,
     image: "/gynecology_service.png"
   }
@@ -162,8 +162,8 @@ function ServicesGridSection({ setCurrentView }: any) {
           </motion.h2>
         </div>
 
-        {/* 2×2 grid */}
-        <div className="grid grid-cols-2 gap-1 max-w-6xl mx-auto w-full">
+        {/* Grid: 1 column on mobile, 2 columns on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 max-w-6xl mx-auto w-full">
           {clinicServices.map((service, index) => (
             <PremiumServiceCard key={index} service={service} index={index} setCurrentView={setCurrentView} />
           ))}
@@ -265,20 +265,21 @@ function TeamSection() {
                     </h3>
                   </div>
                   
-                  {/* Mobile Image Reveal */}
-                  <div className="lg:hidden w-full h-0 overflow-hidden group-hover:h-[350px] transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] mt-4 relative">
+                  {/* Mobile Image Display (Always visible on small screens) */}
+                  <div className="lg:hidden w-full h-[400px] mt-6 mb-4 rounded-2xl overflow-hidden relative shadow-lg">
                     <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                       <p className="font-serif italic text-xl text-white">"{member.quote}"</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
+                       <div className="w-12 h-[1px] bg-brand-accent mb-6"></div>
+                       <p className="font-serif italic text-2xl text-white leading-relaxed">"{member.quote}"</p>
                     </div>
                   </div>
 
-                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 h-0 overflow-hidden group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-500 md:pl-[4.5rem] lg:pl-[5.5rem] mt-2 md:mt-4">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 lg:h-0 lg:overflow-hidden lg:group-hover:h-auto lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 md:pl-[4.5rem] lg:pl-[5.5rem] mt-2 md:mt-4">
                     <div>
-                      <p className="text-brand-accent text-xs md:text-sm uppercase tracking-[0.2em] mb-1">{member.role}</p>
-                      <p className="text-brand-ink/60 text-xs md:text-sm font-light">{member.credentials}</p>
+                      <p className="text-brand-accent text-xs md:text-sm uppercase tracking-[0.2em] mb-1 font-medium">{member.role}</p>
+                      <p className="text-brand-ink/60 text-xs md:text-sm font-light tracking-wide">{member.credentials}</p>
                     </div>
-                    <div className="hidden md:flex items-center gap-2 text-[11px] uppercase tracking-[0.15em] text-brand-ink/40 group-hover:text-brand-ink transition-colors duration-500">
+                    <div className="hidden lg:flex items-center gap-2 text-[11px] uppercase tracking-[0.15em] text-brand-ink/40 group-hover:text-brand-ink transition-colors duration-500">
                       <span>View Profile</span>
                       <ArrowRight size={14} className="opacity-0 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 ease-out" />
                     </div>
@@ -683,7 +684,7 @@ export default function App() {
                 }}
                 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] font-light tracking-tight mb-8 text-brand-ink"
               >
-                Cedar Clinic
+                Clove Dental
               </motion.h2>
               
               <motion.p 

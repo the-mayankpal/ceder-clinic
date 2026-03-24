@@ -29,7 +29,7 @@ export default function Footer({ setCurrentView }: { setCurrentView?: (view: str
           <div className="lg:col-span-6 flex flex-col items-start">
             <img
               src={FOOTER_LOGO_URL}
-              alt="Cedar clinic logo"
+              alt="Clove Dental logo"
               className="h-14 md:h-16 w-auto object-contain mb-6"
             />
             <motion.div 
@@ -99,23 +99,15 @@ export default function Footer({ setCurrentView }: { setCurrentView?: (view: str
             <div className="flex flex-col gap-4">
               <a href="#" className="flex items-start gap-3 text-white/70 hover:text-brand-accent transition-colors group">
                 <MapPin size={16} className="mt-0.5 opacity-50 group-hover:opacity-100" />
-                <span className="text-sm leading-relaxed">Kuwait Salmiya Block 2<br/>The View Tower, 10th Floor</span>
+                <span className="text-sm leading-relaxed">20475 Biscayne Blvd<br/>Miami, FL 33180-1550</span>
               </a>
-              <a href="tel:+96599481111" className="flex items-center gap-3 text-white/70 hover:text-brand-accent transition-colors group">
+              <a href="tel:+13059331111" className="flex items-center gap-3 text-white/70 hover:text-brand-accent transition-colors group">
                 <Phone size={16} className="opacity-50 group-hover:opacity-100" />
-                <span className="text-sm">+965 9948 1111</span>
+                <span className="text-sm">+1 (305) 933-1111</span>
               </a>
-              <a href="tel:+96560737111" className="flex items-center gap-3 text-white/70 hover:text-brand-accent transition-colors group">
-                <Phone size={16} className="opacity-50 group-hover:opacity-100" />
-                <span className="text-sm">+965 6073 7111</span>
-              </a>
-              <a href="tel:+96560471111" className="flex items-center gap-3 text-white/70 hover:text-brand-accent transition-colors group">
-                <Phone size={16} className="opacity-50 group-hover:opacity-100" />
-                <span className="text-sm">+965 6047 1111</span>
-              </a>
-              <a href="mailto:info@cedarclinic.co" className="flex items-center gap-3 text-white/70 hover:text-brand-accent transition-colors group">
+              <a href="mailto:info@clovedental.com" className="flex items-center gap-3 text-white/70 hover:text-brand-accent transition-colors group">
                 <Mail size={16} className="opacity-50 group-hover:opacity-100" />
-                <span className="text-sm">info@cedarclinic.co</span>
+                <span className="text-sm">info@clovedental.com</span>
               </a>
             </div>
             
@@ -142,7 +134,7 @@ export default function Footer({ setCurrentView }: { setCurrentView?: (view: str
               maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)'
             }}
           >
-            {['C', 'E', 'D', 'A', 'R'].map((letter, i) => (
+            {['C', 'L', 'O', 'V', 'E'].map((letter, i) => (
               <span key={i} className="hover:text-white/20 transition-colors duration-300 cursor-default">
                 {letter}
               </span>
@@ -153,7 +145,7 @@ export default function Footer({ setCurrentView }: { setCurrentView?: (view: str
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/10">
           <p className="text-white/40 text-[10px] md:text-xs uppercase tracking-widest text-center md:text-left">
-            © {new Date().getFullYear()} Cedar clinic. All rights reserved.
+            © {new Date().getFullYear()} Clove Dental. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-white/40 hover:text-white text-[10px] md:text-xs uppercase tracking-widest transition-colors">Privacy Policy</a>

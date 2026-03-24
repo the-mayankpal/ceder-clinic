@@ -55,7 +55,7 @@ function BeforeAfterCard({ item }: { item: typeof cases[0] }) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="relative w-full aspect-[4/3] md:aspect-[16/10] cursor-ew-resize select-none group"
+      <div className="relative w-full aspect-[4/3] md:aspect-[16/10] cursor-ew-resize select-none group touch-none"
            ref={containerRef}
            onPointerMove={handlePointerMove}
            onPointerDown={handlePointerDown}
